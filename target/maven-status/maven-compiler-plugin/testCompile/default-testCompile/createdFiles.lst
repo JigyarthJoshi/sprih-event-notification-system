@@ -1,0 +1,5 @@
+com/example/sens/CallbackServiceTest.class
+com/example/sens/EventControllerTest.class
+com/example/sens/GracefulShutdownTest.class
+com/example/sens/SprihEventNotificationSystemApplicationTests.class
+com/example/sens/EventDispatcherServiceTest.class
