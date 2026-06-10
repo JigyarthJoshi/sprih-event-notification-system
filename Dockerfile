@@ -1,5 +1,10 @@
-FROM eclipse-temurin:21-jre
-WORKDIR /app
-COPY target/sprih-event-notification-system-0.0.1-SNAPSHOT.jar app.jar
+FROM python:3.13-slim
+
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+WORKDIR /app
+
+COPY . ./
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+ENTRYPOINT ["streamlit", "run", "chef.py", "--server.port=8080", "--server.address=0.0.0.0"]
